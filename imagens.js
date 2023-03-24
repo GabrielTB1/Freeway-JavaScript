@@ -4,6 +4,7 @@ let imagenDoAtor;
 let imagemCarro1;
 let imagemCarro2;
 let imagemCarro3;
+let imagemCarros;
 
 function preload(){
     imagenDoAtor = loadImage("imagens/ator-1.png");

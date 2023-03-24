@@ -13,19 +13,15 @@ function mostraCarro(){
 }
 
 function movimentaCarro(){
-    xCarros[0] -= velocidadeCarros[0];
-    xCarros[1] -= velocidadeCarros[1];
-    xCarros[2] -= velocidadeCarros[2];
+    for(let i = 0; i < imagemCarros.length; i += 1){
+        xCarros[i] -= velocidadeCarros[i];
+        }
 }
 
 function voltaPosicaoInicial(){
-    if (xCarros[0] < (comprimentoCarros * -1)){
-        xCarros[0] = 600;
-    }
-    if (xCarros[1] < (comprimentoCarros * -1)){
-        xCarros[1] = 600;
-    }
-    if (xCarros[2] < (comprimentoCarros * -1)){
-        xCarros[2] = 600;
+    for(let i = 0; i < imagemCarros.length;i += 1){
+        if (xCarros[i] < (comprimentoCarros * -1)){
+            xCarros[i] = 600;
+        }
     }
 }
