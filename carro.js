@@ -3,7 +3,7 @@ let comprimentoCarros = 50;
 let alturaCarros = 40;
 
 let xCarros = [600,600,600,600,600,600];
-let yCarros = [40,95,150,210,265,320];
+let yCarros = [40,95,150,210,265,315];
 let velocidadeCarros = [2, 2.5, 4, 5, 3.3, 2.3];
 
 function mostraCarro(){
