@@ -29,8 +29,7 @@ function keyPressed(){
 }
 
 function verificaColisao(){
-  // collideRectCircle(x1,y1,width1,height1,cx,cy,diameter)
-  for (let i =0; i < imagemCarros.length; i += 1){
+  for (let i =0; i < imagemCarros.length; i++){
     colisao = collideRectCircle(xCarros[i],yCarros[i],comprimentoCarros,alturaCarros,xAtor,yAtor,alturaAtor);
     if (colisao){
       colidiu();
