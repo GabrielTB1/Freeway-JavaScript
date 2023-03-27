@@ -2,6 +2,7 @@
 let xAtor = 15;
 let yAtor = 370;
 let colisao = false;
+let meusPontos = 0;
 
 let alturaAtor = 25;
 let comprimentoAtor = 25;
@@ -32,11 +33,32 @@ function verificaColisao(){
   for (let i =0; i < imagemCarros.length; i++){
     colisao = collideRectCircle(xCarros[i],yCarros[i],comprimentoCarros,alturaCarros,xAtor,yAtor,alturaAtor);
     if (colisao){
-      colidiu();
+      voltaAtorInicioY();
+      if (pontosMaiorQueZero()){
+        meusPontos -= 1;
+      }
     }
   }
 }
 
-function colidiu(){
+function voltaAtorInicioY(){
   yAtor = 370;
+}
+
+function mostraPontos(){
+  textAlign(CENTER);
+  textSize(25);
+  fill(color(255,240,60));
+  text(meusPontos,width / 5, 27);
+}
+
+function marcaPontos(){
+  if (yAtor < 15){
+    meusPontos += 1;
+    voltaAtorInicioY();
+  }
+}
+
+function pontosMaiorQueZero(){
+  return meusPontos > 0;
 }
