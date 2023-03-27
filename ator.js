@@ -1,6 +1,7 @@
 // Variáveis do ator
 let xAtor = 15;
 let yAtor = 370;
+let colisao = false;
 
 let alturaAtor = 25;
 let comprimentoAtor = 25;
@@ -25,4 +26,18 @@ function keyPressed(){
     else if (keyCode === RIGHT_ARROW && (xAtor + 30) <= (width - comprimentoAtor)) {
       xAtor += 30;
     }
+}
+
+function verificaColisao(){
+  // collideRectCircle(x1,y1,width1,height1,cx,cy,diameter)
+  for (let i =0; i < imagemCarros.length; i += 1){
+    colisao = collideRectCircle(xCarros[i],yCarros[i],comprimentoCarros,alturaCarros,xAtor,yAtor,alturaAtor);
+    if (colisao){
+      colidiu();
+    }
+  }
+}
+
+function colidiu(){
+  yAtor = 370;
 }
